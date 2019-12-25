@@ -1,0 +1,504 @@
+*{
+    color: #EEEEEE;
+    z-index: 11;
+}
+
+body{
+    background-color: #020202;
+}
+
+#all{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+    height: 80%;
+}
+
+#dateAndTime{
+    width: 250px;
+}
+
+#clock{
+    font-size: 55px;
+    font-weight: bold;
+}
+
+#dateToday{
+    font-size: 25px;
+}
+
+#dayName{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+#textContent{
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    display: flex;
+}
+
+h1{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 44px;
+}
+
+#dayIcon, #tomorrowIcon{
+    min-width: 150px;
+    max-height: 150px;
+}
+
+
+main{
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#quote{
+    margin-left: 5%;
+    margin-right: 5%;
+    text-align: center;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.tempText{
+    font-size: 18px;
+}
+
+
+
+#headlines{
+    display: flex;
+    flex-direction: column;
+    font-size: 28px;
+    text-align: center;
+}
+
+#headline2{
+    margin-top: 3%;
+}
+
+.headlineInfos{
+    color: #AAAAAA;
+    font-size: 18px;
+}
+
+
+
+
+#weatherContent{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.iconAndTemp{
+    display: flex;
+    justify-content: space-between;
+}
+
+#tempAndSummary{
+    display: flex;
+    flex-direction: column;
+}
+
+#currentTemp{
+    text-align: right;
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-top: 30%;
+}
+
+#currentShortSummary{
+    font-size: 22px;
+    text-align: right;
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#currentChanceOfRain{
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+    text-align: right;
+    margin-bottom: 30%;
+}
+
+.summary{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+#currentSummary{
+    font-size: 22px;
+}
+
+#tomorrowWeather{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#tomorrowHighTempWrapper, #tomorrowLowTempWrapper{
+    display: flex;
+}
+
+.highLowTemps{
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#upArrow{
+    margin-top: 10%;
+}
+
+#upArrow, #downArrow{
+    text-align: left;
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+#tomorrowHighTemp{
+    margin-top: 10%;
+}
+
+#tomorrowLowTemp{
+    text-align: right;
+}
+
+
+
+#wearables{
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+.wear{
+    max-width: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-moz-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+@-webkit-keyframes move-background {
+    from {
+        -webkit-transform: translate3d(0px, 0px, 0px);
+    }
+    to {
+        -webkit-transform: translate3d(1000px, 0px, 0px);
+    }
+}
+
+.background-container{
+    position: fixed;
+    top: 0;
+    left:0;
+    bottom: 0;
+    right: 0;
+}
+
+.stars {
+    background: black url(../pictures/stars.png) repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: block;
+    z-index: 0;
+}
+
+.twinkling{
+    width:10000px;
+    height: 100%;
+    background: transparent url("../pictures/twinkling.png") repeat;
+    background-size: 1000px 1000px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 2;
+
+    -moz-animation:move-background 70s linear infinite;
+    -ms-animation:move-background 70s linear infinite;
+    -o-animation:move-background 70s linear infinite;
+    -webkit-animation:move-background 70s linear infinite;
+    animation:move-background 70s linear infinite;
+
+}
+
+
+
+
+
+
+.solar-system {
+    position: absolute;
+    width: 780px;
+    height: 780px;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    margin-top: -390px;
+    margin-left: -390px;
+}
+
+/* Some positioning rules that are common for all objects */
+.orbit {
+    border: 1px dashed #666;
+}
+
+#sun, .orbit, .orbit + div, .orbit + div > div {
+    position: absolute;
+}
+
+#sun, .orbit, .orbit + div {
+    top: 50%;
+    left: 50%;
+}
+.orbit + div > div {
+    top: 0;
+    left: 50%;
+}
+
+.orbit, .orbit + div div, #earth {
+    border-radius: 50%;
+}
+
+
+/* Individual objects rules. They are pretty much the same for
+all objects and basically only vary in orbit size
+and planet size. And colors :) */
+
+#sun {
+    /* Positions the top-left corner of the image to be *
+    /* in the middle of the box */
+    height: 200px;
+    width: 200px;
+    background-color: #fae20a;
+    margin-top: -100px;
+    margin-left: -100px;
+    border-radius: 50%;
+    box-shadow: 0 0 84px orange;
+}
+
+#earth {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin-left: -25px;
+    margin-top: -25px;
+    border-radius: 50%;
+    box-shadow: 0 0 34px #3a4385;
+    background-color: #06c;
+}
+
+.earth-orbit, .earth-spin {
+    width: 500px;
+    height: 500px;
+    margin-left: -250px;
+    margin-top: -250px;
+}
+
+#moon {
+    margin-top: -6px;
+    margin-left: -6px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    box-shadow: 0 0 14px #3a4385;
+}
+.moon-orbit, .moon-spin {
+    height: 90px;
+    width: 90px;
+    margin-top: -45px;
+    margin-left: -45px;
+    border-color: #447;
+}
+
+#venus {
+    margin-top: -20px;
+    margin-left: -20px;
+    height: 40px;
+    width: 40px;
+    background-color: #bf8639;
+    box-shadow: 0 0 34px #3a4385;
+}
+.venus-orbit, .venus-spin {
+    margin-top: -185px;
+    margin-left: -185px;
+    width: 370px;
+    height: 370px;
+}
+
+#mercury {
+    margin-top: -13.5px;
+    margin-left: -13.5px;
+    height: 25px;
+    width: 25px;
+    background-color: #b6bac5;
+    /* box-shadow: 0 0 34px #3a4385; */
+}
+
+.mercury-orbit, .mercury-spin {
+
+    width: 280px;
+    height: 280px;
+    margin-left: -140px;
+    margin-top: -140px;
+}
+
+#mars {
+    margin-top: -16px;
+    margin-left: -16px;
+    height: 32px;
+    width: 32px;
+    background-color: #aa4200;
+    box-shadow: 0 0 14px #a64232;
+}
+
+.mars-orbit, .mars-spin {
+    width: 700px;
+    height: 700px;
+    margin-left: -350px;
+    margin-top: -350px;
+}
+
+
+/* Spinning animations */
+
+@keyframes spin-right {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.earth-spin {
+    animation: spin-right 182.5s linear infinite;
+    will-change: transform;
+}
+.moon-spin {
+    animation: spin-right 15s linear infinite;
+    will-change: transform;
+}
+.venus-spin {
+    animation: spin-right 110s linear infinite;
+    will-change: transform;
+}
+.mercury-spin {
+    animation: spin-right 44s linear infinite;
+    will-change: transform;
+}
+.mars-spin {
+    animation: spin-right 343.5s linear infinite;
+    will-change: transform;
+}
+
+
+
+
+
+/*Calendar*/
+
+.vanilla-calendar {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 250px;
+}
+
+.vanilla-calendar .vanilla-calendar-week {
+    display: flex;
+}
+
+.vanilla-calendar .vanilla-calendar-week span {
+    flex-direction: column;
+    flex: 0 0 14.28%;
+    font-size: 1em;
+    font-weight: bold;
+    max-width: 14.28%;
+    padding: 15px 0px;
+    text-transform: uppercase;
+}
+
+.vanilla-calendar .vanilla-calendar-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.vanilla-calendar .vanilla-calendar-date {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 14.28%;
+    max-width: 14.28%;
+    padding: 10px 0;
+}
+
+hr{
+    width: 250px;
+}
