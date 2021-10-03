@@ -1,6 +1,6 @@
 // www.wieli.at
 // By Florian Wieland
-// IF YOU HAVE QUESTIONS: reddit.com/u/wieli99
+// IF YOU HAVE QUESTIONS: florian@wieli.at
 
 
 //CHANGE YOUR DATA HERE
